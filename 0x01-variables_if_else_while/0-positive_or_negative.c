@@ -11,7 +11,6 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* Checks the random input n */
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
