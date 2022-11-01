@@ -4,7 +4,7 @@
  * _strpbrk - searches a string for any of a set of bytes
  * @s: string
  * @accept: number of accepted bytes
- * :Return: pointer to bytes in string
+ * Return: pointer to bytes in string
  */
 
 char *_strpbrk(char *s, char *accept)
@@ -14,12 +14,12 @@ char *_strpbrk(char *s, char *accept)
 		while (*accept != '\0')
 		{
 			if (*accept++ == *s)
-				return (s);
+				return ((char *) s);
 		}
 		s++;
 	}
 
-	return ('\n');
+	return ('\0');
 }
 
 

@@ -10,14 +10,17 @@ void print_diagsums(int *a, int size)
 {
 	int i, j;
 	int sum = 0;
+	int b[size][size];
+
+	a = *b;
 
 	for (i = 0; i < size; i++)
 	{
 		for (j = 0; j < size; j++)
 		{
-			if (i == j || i + j == n - 1)
+			if (i == j || i + j == size - 1)
 			{
-				sum = sum + a[i][j];
+				sum = sum + b[i][j];
 			}
 		}
 	}
