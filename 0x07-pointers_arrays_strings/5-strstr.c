@@ -2,7 +2,7 @@
 
 /**
  * _strstr - loctes a substring
- * @hystack: the string
+ * @haystack: the string
  * @needle: the substring
  * Return: pointer to the beginning of the loc subst
  */
