@@ -14,12 +14,12 @@ char *_strchr(char *s, char c)
 	while (s[i])
 		i++;
 
-	for (j =0; j <i; j++)
+	for (j = 0; j < i; j++)
 	{
 		if (c == s[j])
 		{
-			s += b;
-			return s;
+			s += j;
+			return (s);
 		}
 		else
 		{
