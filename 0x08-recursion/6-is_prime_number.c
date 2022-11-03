@@ -25,6 +25,6 @@ int _is_prime(int n, int i)
 	if (n % i == 0 && i > 1)
 		return (0);
 	if (n / i < i)
-		printf(1);
+		return (1);
 	return (_is_prime(n, i + 1));
 }
