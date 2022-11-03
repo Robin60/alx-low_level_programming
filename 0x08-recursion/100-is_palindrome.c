@@ -1,19 +1,6 @@
 #include "main.h"
 
 /**
- * is_palindrome - palindrome or not
- * @s: the string pointer
- * Return: 1 else 0
- */
-
-int is_palindrome(char *s)
-{
-	int len = _strlen_recursion(s);
-
-	return (pal(s, len - 1));
-}
-
-/**
  * _strlen_recursion - lenght of string
  * @s: string pointer
  * Return: the resultant length
@@ -45,4 +32,17 @@ int pal(char *s, int i)
 	if (*s == *(s + 1))
 		return (pal(s + 1, i - 2));
 	return (0);
+}
+
+/**
+ * is_palindrome - palindrome or not
+ * @s: the string pointer
+ * Return: 1 else 0
+ */
+
+int is_palindrome(char *s)
+{
+	int len = _strlen_recursion(s);
+
+	return (pal(s, len - 1));
 }
