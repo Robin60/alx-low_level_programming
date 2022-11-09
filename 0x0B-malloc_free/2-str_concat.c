@@ -25,8 +25,8 @@ int _strlen(char *str)
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i = 0, j = 0;
-	unsigned int size;
+	int i = 0, j = 0;
+	int size;
 	char *ptr;
 
 	if (s1 == NULL)
@@ -52,5 +52,5 @@ char *str_concat(char *s1, char *s2)
 		*(ptr + i) = *(s2 + j);
 		i++;
 	}
-	return (s1);
+	return (ptr);
 }
