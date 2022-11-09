@@ -43,15 +43,14 @@ char *str_concat(char *s1, char *s2)
 		return ('\0');
 	}
 
-	while (s1[i] != '\0')
-		i++;
-
-	while (s2[j] != '\0')
+	for (i = 0; *(s1 + i) != '\0'; i++)
 	{
-		s1[i] = s2[j];
-		i++;
-		j++;
+		*(ptr + i) = *(s1 + i);
 	}
-
+	for (j = 0; *(s2 + j) != '\0'; j++)
+	{
+		*(ptr + i) = *(s2 + j);
+		i++;
+	}
 	return (s1);
 }
