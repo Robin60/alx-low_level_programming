@@ -7,13 +7,16 @@
  * Return: the length
  */
 
-int *_strlen(char *str)
+int _strlen(char *str)
 {
-	int i = 0;
+	int len = 0;
 
-	while (str != '\0')
-		i++;
-	return (i);
+	while (*str != '\0')
+	{
+		len++;
+		str++;
+	}
+	return (len);
 }
 
 /**
