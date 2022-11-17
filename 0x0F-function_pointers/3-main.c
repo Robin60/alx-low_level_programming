@@ -26,14 +26,14 @@ int main(int argc, char *argv[])
 	if (func == NULL)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 	oper = *argv[2];
 
 	if ((oper == '%' || oper == '/') && b == 0)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(100);
 	}
 	res = func(a, b);
 	printf("%d\n", res);
