@@ -10,24 +10,24 @@
 
 int main(int argc, char *argv[])
 {
-	char *opcode = (char*) main;
+	char *opcode = (char *) main;
 	int i, nbts;
 
-	if(argc != 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	nbts =atoi(argv[1]);
+	nbts = atoi(argv[1]);
 	if (nbts < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 
-	for (i =0; i < nbts; i++)
+	for (i = 0; i < nbts; i++)
 	{
-		printf("02x", opcode[i] & 0xFF);
+		printf("%02x", opcode[i] & 0xFF);
 		if (i != nbts - 1)
 			printf(" ");
 	}
