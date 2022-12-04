@@ -6,7 +6,7 @@
 
 /**
  * struct oper - struct oper
- * @sn: operator sign
+ * @op: operator sign
  * @f: function pointer
  * @x: first number
  * @y: last number
