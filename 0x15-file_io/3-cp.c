@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 			free(buffer);
 			exit(98);
 		}
-		wt = write(sr, buffer, rd);
+		wt = write(ds, buffer, rd);
 		if (ds == -1 || wt == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
