@@ -10,7 +10,7 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t count = 0;
+	int count = 0;
 
 	while (h)
 	{
@@ -18,6 +18,6 @@ size_t print_dlistint(const dlistint_t *h)
 		count++;
 		h = h->next;
 	}
-	print("-> %d elements\n", count);
+	printf("-> %d elements\n", count);
 	return (count);
 }
