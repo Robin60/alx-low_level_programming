@@ -12,17 +12,20 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx = 0;
-	hash_node_t *newhn, *temp = NULL;
 	char *tval = NULL;
+	hash_node_t *newhn = NULL;
+	hash_node_t *temp = NULL;
 
 	if (ht == NULL || ht->array == NULL || value == NULL)
 		return (0);
-	if (key == NULL || strlen(key))
+	if (key == NULL || strlen(key) == 0)
 		return (0);
 	tval = strdup(value);
 	if (tval == NULL)
 		return (0);
-	/*check for collision */
+	idx = key_index((unsigned char *)key, ht->size);
+
+	/* check for collision */
 	temp = ht->array[idx];
 	while (temp)
 	{
