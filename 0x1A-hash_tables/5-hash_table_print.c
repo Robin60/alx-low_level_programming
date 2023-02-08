@@ -23,7 +23,8 @@ void hash_table_print(const hash_table_t *ht)
 		{
 			printf("'%s' : '%s'", node->key, node->value);
 			if (ht->array[i + 1] != NULL)
-				printf(", ");
+				break;
+			printf(", ");
 			node = node->next;
 		}
 	}
